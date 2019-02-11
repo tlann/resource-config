@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.exmample.utils.security</groupId>
+  <groupId>com.example.utils.security</groupId>
   <artifactId>resource-config</artifactId>
   <version>1.0.1</version>
   <properties>
@@ -21,18 +21,6 @@
   </parent>
 
   <dependencies>
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-autoconfigure</artifactId>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-      <!--<scope>provided</scope>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-autoconfigure</artifactId>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-      <!--<scope>provided</scope>-->
-    <!--</dependency>-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
@@ -62,43 +50,6 @@
       <artifactId>spring-security-web</artifactId>
       <version>5.1.3.RELEASE</version>
     </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.security.oauth.boot</groupId>-->
-      <!--<artifactId>spring-security-oauth2-autoconfigure</artifactId>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.security</groupId>-->
-      <!--<artifactId>spring-security-jwt</artifactId>-->
-      <!--<version>1.0.9.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
-      <!--<optional>true</optional>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-      <!--<scope>provided</scope>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-      <!--<artifactId>jackson-databind</artifactId>-->
-      <!--<version>2.9.7</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
-      <!--<version>2.0.8.RELEASE</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>javax.inject</groupId>-->
-      <!--<artifactId>javax.inject</artifactId>-->
-      <!--<version>1</version>-->
-    <!--</dependency>-->
   </dependencies>
 
   <build>
@@ -118,23 +69,6 @@
           </execution>
         </executions>
       </plugin>
-      <!--<plugin>-->
-        <!--<groupId>org.apache.maven.plugins</groupId>-->
-        <!--<artifactId>maven-deploy-plugin</artifactId>-->
-        <!--<version>2.8.2</version>-->
-        <!--<configuration>-->
-          <!--<skip>true</skip>-->
-        <!--</configuration>-->
-      <!--</plugin>-->
-      <!--<plugin>-->
-        <!--<groupId>org.apache.maven.plugins</groupId>-->
-        <!--<artifactId>maven-release-plugin</artifactId>-->
-        <!--<version>2.5.3</version>-->
-        <!--<configuration>-->
-          <!--<tagNameFormat>v@{project.version}</tagNameFormat>-->
-          <!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
-        <!--</configuration>-->
-      <!--</plugin>-->
     </plugins>
   </build>
 
