@@ -22,7 +22,7 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
     String issuerUri;
 
     @Bean
-    JwtDecoder jwtDecoder() {
+    public JwtDecoder jwtDecoder() {
         return JwtDecoders.fromOidcIssuerLocation(issuerUri);
     }
 
