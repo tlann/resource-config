@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.jwt.JwtDecoders;
 public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
-    String issuerUri;
+    private String issuerUri;
 
     @Bean
     public JwtDecoder jwtDecoder() {
