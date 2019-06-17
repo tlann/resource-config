@@ -1,5 +1,6 @@
 package com.example.utils.security.resource.autoconfig;
 
+import mil.noms.utils.security.utils.components.AuthenticationFacade;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,17 +27,24 @@ public class ResourceServerConfig extends WebSecurityConfigurerAdapter {
         return JwtDecoders.fromOidcIssuerLocation(issuerUri);
     }
 
+    @Bean
+    public AuthenticationFacade authenticationFacade(){
+        return new AuthenticationFacade();
+    }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http
                 .csrf().disable()
                 .anonymous().disable()
+                .httpBasic().disable()
                 .logout().disable()
                 .formLogin().disable()
-                .httpBasic().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
+//                .antMatchers("/actuator/**").access("#oauth2?.hasScope('noms-auditor')")
+                .antMatchers("/actuator/**").hasAuthority("SCOPE_noms-auditor")
                 .anyRequest().authenticated()
                 .and()
                 .oauth2ResourceServer().jwt();
